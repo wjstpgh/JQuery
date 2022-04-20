@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자색바꾸기</title>
+    <link rel="stylesheet" href="css/textcolor.css">
+    
+</head>
+<body>
+    <h1 id="heading">Hello World</h1>
+    <p id="text">위 텍스트를 클릭</p>
+    <script>
+        var heading=document.querySelector('#heading');
+        heading.onclick=function(){
+            heading.style.color="red";
+        }
+    </script>
+    <!-- <script src="js/textcolor.js"></script> -->
+</body>
+</html>
