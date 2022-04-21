@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+    
+</head>
+<body>
+    <script>
+        var radius=10;
+        var pi=3.14;
+
+        alert('원둘레는'+ 2*pi*radius+ '입니다.');//알림창
+        window.onload=function(){//윈도우가 열릴때 실행되는것
+            var list='';
+            var num=10;
+
+            list+='<ul>';
+            list+='     <li>안녕</li>';
+            list+='     <li>자바스크립트</li>';
+            list+='</ul>';
+
+            num+=10; num+=10;
+            num+=10; num+=10;
+
+            document.body.innerHTML=list;
+            // document.write(num);
+
+        }
+        // while(1){
+        //     alert('메롱');
+        // }
+        var input=prompt('숫자를 입력하세요');
+        alert(typeof(input));//prompt는 String타입으로 받음
+        var numType=Number(input);//형변환
+        alert(typeof(numType));//int
+    </script>
+
+    
+</body>
+</html>
