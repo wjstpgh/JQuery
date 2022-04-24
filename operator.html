@@ -12,20 +12,22 @@
         var radius=10;
         var pi=3.14;
 
-        alert('원둘레는'+ 2*pi*radius+ '입니다.');//알림창
+        alert('원둘레는 '+ 2*pi*radius + '입니다.');//알림창
         window.onload=function(){//윈도우가 열릴때 실행되는것
             var list='';
-            var num=10;
+            
 
             list+='<ul>';
             list+='     <li>안녕</li>';
             list+='     <li>자바스크립트</li>';
             list+='</ul>';
 
-            num+=10; num+=10;
-            num+=10; num+=10;
+            
 
             document.body.innerHTML=list;
+            var num=10;
+            num+=10; num+=10;
+            num+=10; num+=10;
             // document.write(num);
 
         }
