@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문</title>
+</head>
+<body>
+    <script>
+        var city=['서울','인천','대구','부산','광주','제주'];
+
+        for(var i=0;i<city.length;i++){
+            document.write(city[i]);
+        }
+
+        var data=prompt('배열크기입력');
+        data=parseInt(data);
+
+        for(var i=0;i<data;i++){
+            document.write(i);
+        }
+
+        var dan=prompt('구구단 출력 프로그램입니다.','몇 단을 출력할까요?');
+        dan=parseInt(dan);
+
+        for(var i=1;i<10;i++){
+            document.write(dan+'*'+i+'='+dan*i+'<br>');
+        }
+        
+    </script>
+    
+</body>
+</html>
