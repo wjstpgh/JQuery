@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery로 색상바꾸기</title>
+    <!-- jquery CDN방식으로 사용하기 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 파일을 다운받아서 사용하기 -->
+    <!-- <script src="lib/jquery-3.6.0.min.js"></script> -->
+    <script>
+        $(document).ready(function(){//이 문서가 준비되면 함수를 실행
+            $("#menu2 li").css("color","#F00");//menu2아이디태그 하위 li태그에 색상 입히기
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <ul class="menu" id="menu1">
+            <li>menu1</li>
+            <li>태그안의</li>
+            <li>li태그</li>
+        </ul>
+        <ul class="menu" id="menu2">
+            <li>menu2</li>
+            <li>태그안의</li>
+            <li>li태그</li>
+        </ul>
+    </div>
+    
+</body>
+</html>
