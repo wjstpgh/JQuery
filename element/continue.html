@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3의 배수가 아닌 숫자만 출력</title>
+</head>
+<body>
+    <script>
+        for(var i=1;i<11;i++){//1부터 10까지 반복
+            if(i%3==0){
+                if(i==9){
+                    break;//9을 만나면 반복문 종료
+                }
+                continue;//i가 3의 배수라면 건너뛰기
+            }
+            document.write(i+'<br/>');//3의 배수가 아니면 출력
+        }
+    </script>
+    
+
+</body>
+</html>
