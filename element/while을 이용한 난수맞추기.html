@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>난수맞추기</title>
+</head>
+<body>
+    <script>
+        var low=0;//범위의 최솟값
+        var high=prompt('난수의 최댓값 입력');//범위의 최댓값
+        high=parseInt(high);
+        var card=0;//정답
+
+        while(1){
+            var count=0;
+
+            card=Math.floor(Math.random()*(high+1));//0에서 99까지의 난수출력
+            alert('난수 결정완료, 정답을 맞춰보세요.');
+
+            while(1){
+                var n=0;
+                alert(count+'번째 시도중, 값의 범위는 '+low+'~'+high+'사이입니다.');//값의 범위 출력
+                
+                n=prompt('정답을 입력하세요');//사용자로부터 숫자입력
+                n=parseInt(n);
+
+                if(n>high || n<low){
+                    alert('입력한 숫자가 범위를 벗어났습니다.');
+                }
+                else if(n>=low && n<=high){
+                    if(n==card){//정답일때
+                        alert('정답입니다.');
+                        break;
+                    }
+                    else if(n>card){//정답보다 높은 수가 입력되었을때
+                        alert('아래');
+                        high=n;
+                    }
+                    else{//정답보다 낮은 수가 입력되었을때
+                        alert('위');
+                        low=n;
+                    }
+                }
+                else{
+                    alert('숫자를 입력하세요.');
+                }
+                count++;
+            }
+            alert('시도 횟수는 '+count+'회 입니다.');
+
+            var con=confirm('재시작?');
+            if(con==false){
+                break;
+            }
+            else{
+                high=prompt('난수의 최댓값 입력');//범위의 최댓값
+                high=parseInt(high);
+            }
+        }
+
+    </script>
+</body>
+</html>
