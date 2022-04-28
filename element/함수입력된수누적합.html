@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수입력된수누적합</title>
+</head>
+<body>
+    <script>
+        function sum(){
+            var sum=0;
+            var count=1;
+
+            while(1){
+                var num=parseInt(prompt('숫자 입력 : ','0을 누르면 종료됩니다.'));
+
+                if(num==0){
+                    document.write('함수를 종료합니다.');
+                    return;//리턴문을 통해 무한루프종료
+                }
+                sum+=num;
+                document.write(count+'. '+sum+'<br/>');
+                count++;
+            }
+        }
+        sum();
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수계산기</title>
+</head>
+<body>
+    <script>
+        function hello(){//기본적인 함수
+            document.write('hello<br/>');
+        }
+        hello();//함수호출
+        hello();
+        hello();
+
+        //함수의 매개변수와 리턴값
+        function add(num1,num2){//수의 합
+            var result=num1+num2;
+            return result;
+        }
+        function mul(num1,num2){//수의 곱
+            var result=num1*num2;
+            return result;
+        }
+        function minus(num1,num2){//수의 차
+            var result=num1-num2;
+            return result;
+        }
+        function devide(num1,num2){//수의 나누기
+            var result=num1/num2;
+            return result;
+        }
+        var value=add(10,20);
+        alert('수의 합 : '+value);
+        var value=mul(10,20);
+        alert('수의 곱 : '+value);
+        var value=minus(10,20);
+        alert('수의 차 : '+value);
+        var value=devide(10,20);
+        alert('수의 나누기 : '+value);
+    </script>
+    
+</body>
+</html>

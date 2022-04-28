@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수로문장출력</title>
+</head>
+<body>
+    <script>
+        document.write('1. 이름<br/>');//비효율적인 코드
+        document.write('2. 이름<br/>');
+        document.write('3. 이름<br/>');
+        document.write('4. 이름<br/>');
+        document.write('5. 이름<br/>');
+
+        for(var i=1;i<6;i++){//반복문을 이용한 코드
+            document.write(i+'. 반복문<br/>');
+        }
+
+        function callName(name, count){//함수를 이용한 코드
+            for(var i=1;i<=count;i++){
+                document.write(i+'. '+name+'<br/>');
+            }
+        }
+        callName('함수',7);
+    </script>
+    
+</body>
+</html>
