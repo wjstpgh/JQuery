@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수구구단</title>
+</head>
+<body>
+    <script>
+        function gugu(){//구구단 함수
+            for(var i=2;i<10;i++){
+                document.write(i+'단 출력<br/>');
+                for(var j=1;j<10;j++){
+                    document.write(i+'*'+j+'='+i*j+'<br/>');
+                }
+                document.write('<br/>');
+            }
+        }
+        gugu();//함수는 코드 재활용, 코드절약
+        gugu();//지속적으로 필요할때 호출만 하면 됨
+    </script>
+    
+</body>
+</html>

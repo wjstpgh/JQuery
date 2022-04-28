@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수생명</title>
+</head>
+<body>
+    <script>
+        function localTest(){
+            var value='지역변수';
+            document.write('지역변수호출: '+value);
+        }
+        localTest();
+
+        document.write('지역변수호출: '+value);//함수 밖이므로 value변수는 존재하지 않음
+
+    </script>
+    
+</body>
+</html>
