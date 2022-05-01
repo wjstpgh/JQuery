@@ -1,0 +1,9 @@
+.img-container{
+    position: relative;
+}
+.img-container img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 120px;
+}
