@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="">
+    <script>
+        $(function( ){
+            $(document).ready(function(){
+                //ready는 클라이언트가 사이트를 방문할때 요청한 html문서객체의 로딩이 끝나면 이벤트 실행
+                var height=$('.img').height();
+                console.log('ready() : '+height);
+            });
+
+            $(window).load(function(){
+                //이벤트는 외부에 연동소스(iframe, img, video등)의 로딩이 끝나면 이벤트를 실행한다.
+                var height=$('.img').height();
+                console.log('load() : '+height);
+            });
+        });
+    </script>
+    <title>ready,load</title>
+</head>
+<body>
+    <p>
+        <img src="https://place-hold.it/500X500" class="img">
+    </p>
+    
+</body>
+</html>
