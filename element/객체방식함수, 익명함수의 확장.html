@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>객체방식함수, 익명함수의 확장</title>
+    <script>
+        //객체방식으로 함수 정의하기
+        var hi=new Function('name','document.write(name+"입니다.<br/>")');
+        hi('객체함수');
+
+        //익명함수의 확장으로 함수 정의
+        //재사용하는 것이 목적이 아닌 다른함수와 충돌을 막기위해 사용
+        (function(name){
+            document.write(name+'입니다.');
+        })('익명함수확장');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
