@@ -1,0 +1,19 @@
+.container{
+    width: 600px;
+    height: 500px;
+    position: relative;
+    border: 3px solid red;
+}
+.container #gigu{
+    width: 50px;
+    margin-left: 250px;
+    margin-top: 150px;
+}
+#score{
+    font-size: 30px;
+    font-weight: bold;
+}
+#text{
+    font-size: 30px;
+    font-weight: bold;
+}

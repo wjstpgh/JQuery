@@ -1,0 +1,28 @@
+#panel{
+    width: 600px;
+    height: 300px;
+    border: 2px solid #999;
+    position: relative;
+}
+#bar{
+    position: absolute;
+    left: 50px;
+    top: 190px;
+    width: 500px;
+    height: 20px;
+    background: #f00;
+}
+#fish{
+    position: absolute;
+    left: 50px;
+    top: 120px;
+}
+#nav{
+    text-align: center;
+    width: 600px;
+    margin-top: 20px;
+}
+#btnStart, #btnStop{
+    font-size: 20px;
+    font-weight: bold;
+}

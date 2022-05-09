@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#contents{
+    width: 200px;
+    height: 200px;
+    border: 5px solid blue;
+    margin: 30px;
+    font-size: 100px;
+    text-align: center;
+    line-height: 200px;
+    vertical-align: middle;
+}
