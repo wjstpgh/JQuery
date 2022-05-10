@@ -1,0 +1,13 @@
+body{
+    font-size: 20px;
+}
+#input{
+    width: 300px;
+}
+#output{
+    width: 600px;
+    height: 200px;
+    border: 2px solid red;
+    text-align: left;
+    vertical-align: top;
+}
