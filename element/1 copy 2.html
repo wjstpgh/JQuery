@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        var names=['네이버','카카오','라인','쿠팡','배달의민족'];
+        document.write('실행 전 : '+names.join(',')+'</br>');
+        //sort는 문자열 기반 오름차순 정렬
+        names.sort();
+        document.write('sort(ASC) 실행 : '+names.join(',')+'</br>');
+
+        //문자열을 내림차순으로 정렬
+        names.sort(function(a,b){
+            if(a>b) return -1;
+            if(a<b) return 1;
+        });
+        document.write('sort(DESC) 실행 : '+names.join(',')+'</br>');
+
+    </script>
+    <style>
+        
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
