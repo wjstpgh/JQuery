@@ -1,0 +1,17 @@
+body{
+    font-size: 15px;
+    font-family: '굴림';
+}
+div, p, ul, li{
+    border: 1px solid gray;
+    margin: 10px;
+}
+ul{
+    padding: 10px;
+}
+li.select{
+    background-color: #ccc;
+}
+#header{
+    border: 5px solid aqua;
+}

@@ -1,0 +1,28 @@
+body{
+    font-size: 15px;
+    font-family: '굴림';
+}
+#panel{
+    width: 600px;
+    height: 300px;
+    border: 2px solid black;
+    position: relative;
+}
+#gigu{
+    position: absolute;
+    left: 50px;
+    top: 140px;
+    width: 50px;
+}
+#bar{
+    position: absolute;
+    left: 50px;
+    top: 190px;
+    width: 500px;
+    height: 15px;
+    background-color: #f30;
+}
+#nav{
+    text-align: center;
+    width: 600px;
+}
