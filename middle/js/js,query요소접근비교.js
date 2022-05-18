@@ -28,4 +28,24 @@ $(document).ready(function(){
     $('p').css('border','3px solid #586');
     //jQuery로 div>p.test2태그변경
     $('div p.test2').css('border','3px solid #663');
+    //아이디선택자를 이용해 노드찾기
+    $('#footer').css('border','3px solid #356');
+    //변수에 할당하는 방법
+    var $footer=$('#footer');
+    $footer.css('color','red');
+    //태그이름으로 노드찾기
+    var $p=$('p');
+    $p.css('color','#119');
+    //클래스이름으로 노드찾기
+    var $menu=$('.menu');
+    $menu.css('border','3px solid #ccc');
+    //ul태그의 자식요소 클래스선택자
+    var $test1=$('ul.menu li.test1');
+    var $select=$('ul.menu li.select');
+    $test1.css('background-color','#512');
+    $select.css('background-color','aqua');
+    //클래스속성 태그선택
+    $('[class^=m]').css('background-color','#c99');
+    //아이디속성 태그선택
+    $('[id$=a]').css('background-color','#000');
 });
