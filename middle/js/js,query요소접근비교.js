@@ -48,4 +48,9 @@ $(document).ready(function(){
     $('[class^=m]').css('background-color','#c99');
     //아이디속성 태그선택
     $('[id$=a]').css('background-color','#000');
+    //$('ul.menu li').each(function(index){
+            //this는 현재 jQuery의 객체를 가르킴
+        //    document.write(this+'</br>');
+        //   console.log(this);
+    //});
 });
