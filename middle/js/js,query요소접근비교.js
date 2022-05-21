@@ -53,4 +53,32 @@ $(document).ready(function(){
         //    document.write(this+'</br>');
         //   console.log(this);
     //});
+    var $content=$('#content');
+    //filter()는 특정노드를 찾는데 자식요소에서만
+    //find()는 자손의 특정 요소를 찾음
+    $content.find('.test1').css('background','yellow');
+
+    $('ul.menu li').click(function(){
+        //클릭한 객체의 인덱스값을 출력
+        alert($(this).index());
+    });
+    //특정 노드의 모든 자식 태그를 찾아줌
+    $('#samplePage').children().css('border','2px solid blue');
+    console.log($('#samplePage').children().length);//3
+    //특정 노드의 모든 자식 태그에 텍스트노드까지 찾아줌
+    $('#samplePage').contents().css('border','2px solid aqua');
+    console.log($('#samplePage').contents().length);//7
+
+    //특정 노드의 모든 자식 태그 중 header를 찾아줌
+    $('#samplePage').children('#header').css('border','2px solid brown');
+    console.log($('#samplePage').children('#header').length);
+    //특정 노드의 모든 자식 태그와 텍스트노드 중 content를 찾아줌
+    $('#samplePage').contents('#content').css('border','2px solid gray');
+    console.log($('#samplePage').contents('#content').length);
+
+    var $menu=$('ul.menu');
+    //childern을 이용해 선택자 :first를 이용해 첫번째 자식을 구함
+    $menu.children(':first').css('background','red');
+    //children을 통해 나온 jQuery객체에 first()를 이용해 첫번째 자식을 구함
+    $menu.children().first().css('background','red');
 });

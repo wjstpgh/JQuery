@@ -25,4 +25,21 @@ $(function( ){
             $(this).css('margin',Pixel);
         });
     });
+
+    $('.btn4').click(function(){
+        var $liList=$('.container li');
+        for(var i=0;i<$liList.length;i++){
+            $liList.eq(i).css('background-color','gray');
+        }
+    });
+
+    var $li=$('ul.container li');
+    //filter는 선택된 태그 중에서 찾음
+    $li.filter('.filter').css('background','aqua');
+    $li.find('.find').css('background','blue');
+
+    var $ul=$('ul.container');
+    //find는 선택된 태그 안에서 찾음
+    $ul.filter('.filter').css('background','aqua');
+    $ul.find('.find').css('background','blue');
 });
