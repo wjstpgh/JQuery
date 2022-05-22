@@ -81,4 +81,32 @@ $(document).ready(function(){
     $menu.children(':first').css('background','red');
     //children을 통해 나온 jQuery객체에 first()를 이용해 첫번째 자식을 구함
     $menu.children().first().css('background','red');
+    //last선택자를 이용해 마지막 자식노드에 접근
+    $menu.children(':last').css('border','5px solid brown');
+    //jQuery객체에 last를 적용시켜서 접근
+    $menu.children().last().css('border','2px solid brown');
+
+    //$menu.children().eq(($menu.children().length)-1).css('border','5px solid borwn');
+
+    //선택자 :eq()를 이용해 자식노드에 접근
+    $menu.children(':eq(1)').css('color','green');
+    //jQeury객체에 eq()를 적용해 접근
+    $menu.children().eq(2).css('border','3px solid green');
+    //바로 위의 부모노드에 접근
+    $menu.parent().css('border','2px solid blue');
+    //두 계층 위의 조상노드에 접근
+    $menu.parent().parent().css('border','2px solid yellow');
+    //지정된 태그위의 모든 조상노드에 접근
+    $menu.parents().css('border','4px solid brown');
+    var $select=$('ul.menu li.select');
+    //li태그중 select클래스의 이전형제 노드 접근
+    $select.prev().css('border','5px solid blue');
+    var $last=$('ul.menu li:last');
+    //li태그중 마지막 노드의 모든 이전형제 노드 접근
+    $last.prevAll().css('border','5px solid blue');
+    //li태그중 select클래스의 다음 노드 접근
+    $select.next().css('border','5px solid aqua');
+    //li태그중 마지막 노드의 모든 다음형제 노드 접근
+    $last=$('ul.menu li:first');
+    $last.nextAll().css('border','5px solid brown');
 });
