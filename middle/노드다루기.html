@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/노드다루기.css">
+    <script>
+        $(function( ){
+            var cnt=6;
+            $('#btnAdd').click(function(){
+                cnt++;
+                //신규노드생성
+                var $li=$('<li>메뉴'+cnt+'</li>');
+                var li=document.createElement('li');
+                var liText=document.createTextNode('메뉴'+cnt);
+                var menu=document.getElementById('menu');
+            //     //text노드를 li에 추가
+            //     li.appendChild(liText);
+            //     //menu선택자에 li노드 추가
+            //     menu.appendChild(li);
+            //     //li객체 출력
+            //     //console.log($li.get(0));
+            //     console.log(li);
+            //     //element를 출력
+            //     //document.write($li.get(0));
+                //prepend()는 처음 자식노드 추가
+                //$('#menu').prepend('<li>메뉴'+cnt+'</li>');
+
+                //신규노드를 직접 생성1
+                //var $li=$('<li>메뉴'+cnt+'</li>');
+                //$('#menu').prepend($li);
+                //신규노드 직접생성2
+                //$li.prependTo('#menu');
+                //신규노드 직접생성3
+                //$li.insertBefore('#menu li:first');
+
+                //jQeury객체 생성
+                $item=$('<li>메뉴'+cnt+'</li>');
+                //선택된 태그 앞에 추가
+                //$item.insertBefore('#menu li.select');
+                //$('#menu li.select').before($item);
+
+                //선택된 태그 뒤에 추가
+                //$item.insertAfter('#menu li.select');
+                //$('#menu li.select').after($item);
+                //자식노드의 마지막에 추가
+                //$('#menu').append($item);
+                //$item.appendTo('#menu');
+            });
+            var $menu=$('#menu');
+            $('#menu li').click(function(){
+                //클릭된 li태그를 마지막 위치에 추가
+                //$menu.append(this);
+
+                //select클래스를 선택했다면 종료
+                if($(this).hasClass('select')==true){
+                    return;
+                }
+                //select클래스가 아닌 li를 클릭했다면 해당 노드를 이동
+                else{
+                    //select노드 이전으로 이동
+                    //$(this).insertBefore($('.select'));
+                    //select노드 이후로 이동
+                    $(this).insertAfter($('.select'));
+                }
+            });
+        });
+    </script>
+    <title>노드다루기</title>
+</head>
+<body>
+    <button id="btnAdd">노드변경</button>
+    <ul id="menu">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li class="select">메뉴5</li>
+        <li>메뉴6</li>
+    </ul>
+</body>
+</html>

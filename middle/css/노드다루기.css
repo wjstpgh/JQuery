@@ -1,0 +1,14 @@
+body{
+    font-size: 15px;
+    font-family: '맑은 고딕';
+}
+ul, li{
+    border: 3px solid gray;
+    margin: 10px;
+}
+ul{
+    padding: 10px;
+}
+li.select{
+    background-color: aquamarine;
+}
