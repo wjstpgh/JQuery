@@ -13,7 +13,7 @@
                 cnt++;                
                 var $li=$('<li>메뉴'+cnt+'</li>');
                 //신규노드 직접생성2
-                $li.prependTo('#menu');
+                //$li.prependTo('#menu');
                 //신규노드 직접생성3
                 //$li.insertBefore('#menu li:first');
                 //li객체 출력
@@ -33,6 +33,22 @@
                 //자식노드의 마지막에 추가
                 //$('#menu').append($item);
                 //$item.appendTo('#menu');
+
+                //노드 한번에 추가하기
+                for(var i=1;i<=10;i++){
+                    //추가할 노드 i개만큼 적용
+                    //$('#menu').append('<li>메뉴'+i+'</li>');
+                }
+
+                var data='';
+                for(var i=1;i<=10;i++){
+                    //추가할 노드 i개만큼 생성
+                    //data+='<li>메뉴'+i+'</li>';
+                }
+                //생성한 노드를 적용
+                //$('#menu').html(data);
+
+                
             });
             var $menu=$('#menu');
             $('#menu li').click(function(){
@@ -67,9 +83,13 @@
                 //$('#menu li:even').remove();
                 //모든 자식 중 홀수번째 인덱스 노드만 삭제
                 //$('#menu li:odd').remove();
+                //html은 한번만 호출하여 모든 노드 삭제
+                //$('#menu').html('');
+                //li태그 수만큼 메소드 호출
+                //$('#menu li').remove();
             });
 
-            $('#btnok').click(function(){
+            $('#btnchk').click(function(){
                 //html은 특정 노드의 마크업까지 확인
                 //리턴값은 DOM객체가 아닌 문자열
                 console.log($('#menu').html());
@@ -83,7 +103,7 @@
 <body>
     <button id="btnAdd">노드변경</button>
     <!-- <button id="btnrm">노드삭제</button> -->
-    <!-- <button id="btnok">확인</button> -->
+    <!-- <button id="btnchk">확인</button> -->
     <ul id="menu">
         <li>메뉴1</li>
         <li>메뉴2</li>
