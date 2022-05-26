@@ -1,0 +1,22 @@
+body{
+    font-size: 15px;
+    font-family: '맑은 고딕';
+}
+ul.menu{
+    padding: 10px;
+    list-style: none;
+    border: 1px solid gray;
+}
+ul.menu li{
+    border: 2px solid blue;
+    margin: 10px;
+}
+button{
+    text-align: center;
+}
+button:hover{
+    background-color: aquamarine;
+}
+li.select{
+    background-color: gray;
+}
