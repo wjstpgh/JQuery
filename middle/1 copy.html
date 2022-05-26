@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/">
+    <style>
+        div{
+            margin: 20px;
+            padding: 10px;
+            font-size: 26px;
+            border: 2px solid red;
+        }
+    </style>
+    <script>
+        //js로 스타일 접근
+        window.onload=function(){
+            var content=document.getElementById('test');
+            //인라인 속성은 접근이 가능
+            console.log('color : ', content.style.color);
+            //외부 속성은 접근 불가능
+            console.log('border : ', content.style.border);
+            console.log('margin : ', content.style.margin);
+            console.log('fontsize : ', content.style.fontSize);
+            //getComputedStyle은 내부, 외부 스타일 모두 접근 가능
+            console.log('border : ', window.getComputedStyle(content).border);
+            //js에서는 속성 이름에 카멜-표기법을 사용한다.
+            content.style.fontSize='12px';
+        }
+        //jQuery로 스타일 접근
+        $(function( ){
+            var $content=$('#test');
+            //jQuery는 내부,외부 스타일에 대한 제한이 없음
+            console.log('color : ', $content.css('color'));
+            console.log('border : ', $content.css('border'));
+            console.log('margin : ', $content.css('margin'));
+            console.log('fontsize : ', $content.css('font-size'));
+            //jQuery는 두 가지 표기 모두 사용가능
+            $content.css('fontSize','12px');
+            $content.css('font-size','12px');
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="test" class="content" style="color:blue;">
+        스타일 다루기
+    </div>
+</body>
+</html>
