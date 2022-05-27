@@ -1,0 +1,6 @@
+#panel{
+    width: 600px;
+    overflow: visible;
+    border: 2px solid red;
+    font-size: 20px;
+}

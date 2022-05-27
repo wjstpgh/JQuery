@@ -1,0 +1,11 @@
+#panel{
+    width: 600px;
+    height: 400px;
+    border: 2px solid red;
+    position: relative;
+}
+#fish{
+    position: absolute;
+    left: 250px;
+    top: 150px;
+}
