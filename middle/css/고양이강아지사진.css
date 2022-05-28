@@ -1,0 +1,19 @@
+body{
+    font-size: 25px;
+}
+#container{
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid red;
+}
+#image1, #image2, #image3{
+    width: 200px;
+}
+div{
+    float: left;
+    margin: 20px;
+    padding-left: 13px;
+}
