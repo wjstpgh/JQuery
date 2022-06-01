@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/">
+    <style>
+        #btnA, #btnB{
+            font-size: 25px;
+        }
+        #btnA:hover, #btnB:hover{
+            background-color: green;
+        }
+        .test{
+            width: 100px;
+            height: 30px;
+            margin: 0 auto;
+            background-color: black;
+            text-align: center;
+            color: white;
+        }
+        #addtest{
+            width: 100px;
+            margin: 0 auto;
+            margin-top: 20px;
+            font-size: 20px;
+            text-align: center;
+            display: block;
+        }
+    </style>
+    <script>
+        $(function( ){
+            $('#btnA').on('click',function(e){
+                //강제로 btnB에 클릭 이벤트 발생되도록 함
+                $('#btnB').trigger('click');
+            });
+
+            //btnB 클릭 이벤트
+            $('#btnB').on('click',function(e){
+                alert('버튼B');
+            });
+
+            var cnt=0;
+            $('#testspan').on('click',function(e){
+                ++cnt;
+                $(this).text(cnt);
+            });
+            //addtest버튼에 testspan 클릭 이벤트를 걸어둠
+            $('#addtest').on('click',function(e){
+                $('#testspan').trigger('click');
+            })
+        });
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <button id="btnA">버튼A</button>
+    <button id="btnB">버튼B</button>
+    <div class="test">
+        숫자 : <span id="testspan"><b>0</b></span>
+    </div>
+    <button id="addtest">증가</button>
+</body>
+</html>
