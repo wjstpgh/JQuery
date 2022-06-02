@@ -1,0 +1,22 @@
+#btnA, #btnB{
+    font-size: 25px;
+}
+#btnA:hover, #btnB:hover{
+    background-color: green;
+}
+.test{
+    width: 100px;
+    height: 30px;
+    margin: 0 auto;
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+#addtest{
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+}

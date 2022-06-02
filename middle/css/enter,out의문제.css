@@ -1,0 +1,26 @@
+#parent{
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    left: 200px;
+    top: 100px;
+    background-color: orange;
+    border: 1px solid orange;
+    overflow: hidden;
+}
+#child{
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    left: 100px;
+    top: 0;
+    background-color: aqua;
+}
+#child div{
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+#child div.over{
+    background-color: blueviolet;
+}

@@ -1,0 +1,18 @@
+body{
+    font-size: 20px;
+    font-family: '맑은 고딕';
+}
+ul, li{
+    border: 1px solid gray;
+    margin: 15px;
+}
+ul{
+    padding: 10px;
+}
+li.select{
+    background-color: #ccc;
+}
+#output{
+    border: 2px solid black;
+    min-height: 100px;
+}
