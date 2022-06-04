@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-size: 20px;
+        }
+        #panel{
+            position: absolute;
+            top: 400px;
+            width: 600px;
+            height: 300px;
+            border: 2px solid gray;
+        }
+        .bar{
+            position: absolute;
+            left: 50px;
+            top: 190px;
+            width: 500px;
+            height: 20px;
+            background-color: red;
+        }
+        #gigu{
+            position: absolute;
+            width: 70px;
+            left: 50px;
+            top: 120px;
+        }
+        #parent1{
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            left: 100px;
+            top: 100px;
+            background-color: aqua;
+        }
+        #parent2{
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+            background-color: tan;
+        }
+        #child{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 50px;
+            top: 100px;
+            background-color: red;
+        }
+        #info{
+            border: 1px solid black;
+            height: 30px;
+            margin: 50px 0 0 100px;
+            width: 500px;
+        }
+        #parent{
+            position: absolute;
+            width: 500px;
+            height: 400px;
+            left: 100px;
+            top: 100px;
+            border: 1px solid black;
+        }
+        .fish{
+            position: absolute;
+            width: 120px;
+        }
+        .fish p{
+            position: absolute;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        #fish1{
+            left: 50px;
+            top: 100px;
+        }
+        #fish2{
+            left: 150px;
+            top: 200px;
+        }
+        #fish3{
+            left: 180px;
+            top: 40px;
+        }
+        #fish4{
+            left: 350px;
+            top: 200px;
+        }
+        #fish5{
+            left: 50px;
+            top: 300px;
+        }
+    </style>
+    <script>
+        $(function( ){
+            //gigu노드 가져오기
+            var $gigu=$('#gigu');
+
+            //버튼 이벤트 등록
+            $('#move').click(function(e){
+                //gigu의 위치 구하기
+                var currentX=$gigu.position().left+10;
+                $gigu.css('left',currentX);
+                console.log(currentX);
+            });
+            //부모좌표노드 구하기
+            var $parent=$('#child').offsetParent();
+            //부모 id 출력
+            console.log('부모 id : '+$parent.attr('id'));
+
+            //상대 위치 구하기
+            var $info=$('#info');
+            //fish에 클릭이벤트 등록
+            $('.fish').click(function(e){
+                //클릭한 물고기
+                $selectedFish=$(this);
+                //위치 구하기
+                var pos=$selectedFish.position();
+                var str='id = '+$selectedFish.attr('id')+', left = '+pos.left+', top = '+pos.top;
+                //위치 정보 출력
+                $info.html(str);
+            });
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="panel">
+        <div class="bar"></div>
+        <img src="resource/gigu.png" id="gigu">
+    </div>
+    <div>
+        <button id="move">이동</button>
+    </div>
+    <div id="parent1">
+        parent1
+        <div id="parent2">
+            parent2
+            <div id="child">
+                child
+            </div>
+        </div>
+    </div> -->
+    <div id="info">
+        위치 값 출력
+    </div>
+    <div id="parent">
+        <div id="fish1" class="fish">
+            <p>1</p>
+            <img src="resource/fish.png">
+        </div>
+        <div id="fish2" class="fish">
+            <p>2</p>
+            <img src="resource/fish.png">
+        </div>
+        <div id="fish3" class="fish">
+            <p>3</p>
+            <img src="resource/fish.png">
+        </div>
+        <div id="fish4" class="fish">
+            <p>4</p>
+            <img src="resource/fish.png">
+        </div>
+        <div id="fish5" class="fish">
+            <p>5</p>
+            <img src="resource/fish.png">
+        </div>
+    </div>
+</body>
+</html>
