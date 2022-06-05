@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 20px;
+}
+#panel{
+    position: absolute;
+    top: 400px;
+    width: 600px;
+    height: 300px;
+    border: 2px solid gray;
+}
+.bar{
+    position: absolute;
+    left: 50px;
+    top: 190px;
+    width: 500px;
+    height: 20px;
+    background-color: red;
+}
+#gigu{
+    position: absolute;
+    width: 70px;
+    left: 50px;
+    top: 120px;
+}
+#parent1{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 100px;
+    top: 100px;
+    background-color: aqua;
+}
+#parent2{
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    background-color: tan;
+}
+#child{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 50px;
+    top: 100px;
+    background-color: red;
+}
+#info{
+    border: 2px solid black;
+    height: 60px;
+    margin: 50px 0 0 100px;
+    width: 500px;
+}
+#parent{
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    left: 100px;
+    top: 130px;
+    border: 1px solid black;
+}
+.fish{
+    position: absolute;
+    width: 120px;
+    cursor: pointer;
+}
+.fish p{
+    position: absolute;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+#fish1{
+    left: 50px;
+    top: 100px;
+}
+#fish2{
+    left: 150px;
+    top: 200px;
+}
+#fish3{
+    left: 180px;
+    top: 40px;
+}
+#fish4{
+    left: 350px;
+    top: 200px;
+}
+#fish5{
+    left: 50px;
+    top: 300px;
+}
+#btnAlign{
+    left: 100px;
+    top: 50px;
+    width: 100px;
+    height: 30px;
+}
