@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #main{
+            border: 1px dotted red;
+            width: 500px;
+            margin: 50px;
+        }
+        #info{
+            border: 10px solid red;
+            position: fixed;
+            left: 120px;
+            top: 100px;
+        }
+    </style>
+    <script>
+        $(function( ){
+            $(window).on('resize',function(){
+                showInfo();
+            });
+            showInfo();
+
+            function showInfo(){
+                var str='';
+                str+='문서의 너비 : '+$(document).width()+'<br/>';
+                str+='문서의 높이 : '+$(document).height()+'<br/>';
+                //스크린의 화면크기는 출력과  작업표시줄을 다 포함하는 해상도를 출력
+                str+='스크린의 너비 : '+screen.width+'<br/>';
+                str+='스크린의 높이 : '+screen.height+'<br/>';
+                //유효한 화면, 작업표시줄을 제외한 크기
+                str+='유효 스크린의 너비 : '+screen.availWidth+'<br/>';
+                str+='유효 스크린의 높이 : '+screen.availHeight+'<br/>';
+                //윈도우의 기본크기 (메뉴바,툴바,스크롤바등을) 제외한 영역
+                str+='브라우저의 내부 너비 : '+window.innerWidth+'<br/>';
+                str+='브라우저의 내부 높이 : '+window.innerWidth+'<br/>';
+                //윈도우의 기본크기 + 메뉴바+툴바 (스크롤바) 제외
+                str+='브라우저의 외부 너비 : '+$(window).width()+'<br/>';
+                str+='브라우저의 외부 높이 : '+$(window).height()+'<br/>';
+                //윈도우의 전체크기
+                str+='브라우저의 외부 너비 : '+window.outerWidth+'<br/>';
+                str+='브라우저의 외부 높이 : '+window.outerWidth+'<br/>';
+                $('#info').html(str);
+            }
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p>
+        <p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p>
+        <p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p>
+        <p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p>
+        <p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p>
+        <p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p>
+        <p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p>
+        <p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p>
+        <p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p>
+        <p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p>
+        <p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p>
+        <p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p>
+        <p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p>
+        <p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p><p>문장</p>
+    </div>
+    <div id="info">
+        문서의 크기 출력
+    </div>
+</body>
+</html>
