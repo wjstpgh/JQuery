@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#main{
+    border: 1px dotted red;
+    width: 500px;
+    margin: 50px;
+}
+#info{
+    border: 10px solid red;
+    position: fixed;
+    left: 120px;
+    top: 100px;
+}
