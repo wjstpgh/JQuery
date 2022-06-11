@@ -1,0 +1,13 @@
+*{
+    font-size: 15px;
+}
+#target{
+    border: 1px solid black;
+    width: 600px;
+    height: 500px;
+    text-align: center;
+}
+#kor{
+    width: 600px;
+    height: 500px;
+}

@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrap{
+    margin: 50px;
+}
+#prev, #next{
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 20%;
+    background-color: green;
+    color: darkorange;
+    cursor: pointer;
+}
+#prev:hover, #next:hover{
+    background-color: orange;
+    color: greenyellow;
+}
+.banner{
+    margin-top: 10px;
+    width: 260px;
+    height: 166px;
+    position: relative;
+    overflow: hidden;
+}
+.banner-container{
+    width: 1300px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.banner-container img{
+    display: block;
+    float: left;
+    left: 0;
+    top: 0;
+    width: 260px;
+}

@@ -1,0 +1,15 @@
+#info{
+    border: 10px solid blue;
+    position: fixed;
+    left: 120px;
+    top: 100px;
+}
+#main{
+    border: 1px solid red;
+    width: 1500px;
+    margin: 50px;
+}
+#top{
+    width: 100px;
+    height: 50px;
+}
