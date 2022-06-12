@@ -1,0 +1,17 @@
+#panel{
+    border: 1px solid blueviolet;
+    width: 600px;
+    height: 400px;
+    margin-top: 15px;
+    position: relative;
+}
+#fish{
+    position: absolute;
+    left: 50px;
+    top: 120px;
+}
+#info{
+    width: 600px;
+    height: 40px;
+    border: 1px solid burlywood;
+}

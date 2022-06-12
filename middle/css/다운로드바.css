@@ -1,0 +1,11 @@
+.box{
+    border: 2px solid gold;
+    margin: 10px;
+    width: 500px;
+}
+.bar{
+    background-color: goldenrod;
+    height: 50px;
+    width: 0;
+    border: 2px solid gold;
+}

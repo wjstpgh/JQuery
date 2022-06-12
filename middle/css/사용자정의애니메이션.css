@@ -1,0 +1,11 @@
+#kor{
+    width: 400px;
+    height: 300px;
+}
+#target{
+    border: 1px solid brown;
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    position: relative;
+}
