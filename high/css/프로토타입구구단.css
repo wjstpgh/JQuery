@@ -1,0 +1,10 @@
+#output{
+    border: 1px solid red;
+    width: 400px;
+    height: 400px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+button:hover{
+    background-color: blueviolet;
+}
