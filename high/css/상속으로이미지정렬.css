@@ -1,0 +1,14 @@
+body{
+    font-size: 15px;
+}
+div.img-container{
+    position: relative;
+    border: 2px solid gray;
+    height: 600px;
+}
+div.img-container img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 120px;
+}
