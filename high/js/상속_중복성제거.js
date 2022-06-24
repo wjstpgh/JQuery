@@ -11,7 +11,7 @@ function MyClassA(){
     this.property1=10;
 }
 //상속
-//MyClassA.prototype=new MyParent();
+MyClassA.prototype=new MyParent();
 //메서드 정의
 MyClassA.prototype.method1=function(){
     console.log('속성1: '+this.property1);
@@ -24,6 +24,8 @@ MyClassA.prototype.method2=function(){
 function MyClassB(){
     this.property1=10;
 }
+//상속
+MyClassB.prototype=new MyParent();
 //메서드 정의
 MyClassB.prototype.method1=function(){
     console.log('속성1:'+this.property1);
