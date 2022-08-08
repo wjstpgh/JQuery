@@ -15,7 +15,7 @@ console.log([...set]);//배열의 형태로 spread
 
 //for 반복문
 for(let i=0;i<set.size;i++){
-    console.log(i);
+    console.log(set[i]);
 }
 
 //forEach반복
