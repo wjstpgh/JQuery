@@ -12,5 +12,20 @@ function day(){
 //아래 두 객체의 prototype속성이 가르키는 것은 day의 프로토타입 객체
 let mon=new day();
 let fri=new day();
+console.log(mon);
+console.log(fri);
 
+//day객체에 멤버 추가
+day.prototype.yuncha=function(whatday){
+    return whatday+this.constructor.name+'에 연차 쓰겠습니다';
+}
+console.log(mon.yuncha('mon'));
+console.log(fri.yuncha('fri'));
+
+//자식객체내에서 같은 메서드 생성 @override
+fri.yuncha=function(){
+    return 'fire friday';
+}
+console.log(mon.yuncha('mon'));
+console.log(fri.yuncha('fri'));
 
