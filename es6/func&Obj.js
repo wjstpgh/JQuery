@@ -29,3 +29,9 @@ fri.yuncha=function(){
 console.log(mon.yuncha('mon'));
 console.log(fri.yuncha('fri'));
 
+//속성추가
+mon.feel='hell';
+console.log(mon.feel);//hell
+console.log(fri.feel);//undefined
+
+//day의 prototype 객체는 객체 생성을 위한 부모격의 원형객체
