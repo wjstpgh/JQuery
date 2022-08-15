@@ -20,3 +20,10 @@ console.log(user2.name);
 console.log(user2.age);
 user2.hi();
 
+console.clear();
+let user3={};
+user3.__proto__=user2;
+console.log(user3.hasOwnProperty('name'));//false
+console.log(user3.name);//park
+console.log(user3.age);//20
+user3.hi();//hi park

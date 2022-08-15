@@ -35,3 +35,4 @@ console.log(mon.feel);//hell
 console.log(fri.feel);//undefined
 
 //day의 prototype 객체는 객체 생성을 위한 부모격의 원형객체
+
