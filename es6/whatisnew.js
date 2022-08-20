@@ -14,7 +14,10 @@ const add=new Add(1,2);
 console.log(add.plus());//3
 
 //내부동작
-const newobj={};
-newobj.__proto__=Add.prototype;
-Add.apply(newobj,[1,2]);
-console.log(newobj.plus());//3
+const newadd={};
+newadd.__proto__=Add.prototype;
+Add.apply(newadd,[1,2]);
+console.log(newadd.plus());//3
+
+console.log(add);
+console.log(newadd);
