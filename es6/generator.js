@@ -13,5 +13,15 @@ function* gene(){
 //호출 시 바로 실행되는 것이 아닌 iterator객체를 반환
 //iter 반복자 객체는 내부적으로 next() method를 가짐
 
+//iterator객체반환 next() 메서드 존재 yield를 만나면 멈추고 제어권 양도
+const iter=gene();
+//next가 반환하는 속성 {value,done}
+console.log(iter.next());//{value:1,done:false}
+console.log(iter.next());//{value:2,done:false}
+console.log(iter.next());//{value:3,done:false}
+console.log(iter.next());//{valueL:4,done:true}
+console.log(iter.next());//{value:undefined,done:true}
+
+//next -> yield 순환으로 동작
 
 
