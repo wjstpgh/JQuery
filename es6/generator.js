@@ -24,4 +24,18 @@ console.log(iter.next());//{value:undefined,done:true}
 
 //next -> yield 순환으로 동작
 
+function* gen(){
+    const a=yield 1;
+    const b=yield(a*1);
+    const c=yield(b+2);
+    return a*b*c;
+}
+
+const iter2=gen();
+console.log(iter.next());
+console.log(iter.next(100));
+console.log(iter.next(48));
+console.log(iter.next(2));
+
+
 
