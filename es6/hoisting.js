@@ -15,5 +15,30 @@ console.log('var1:'+var1);//undefined
 console.log('var2:'+var2);//undefined
 var var2;
 
-console.log('let1:'+let1);//Err
+// console.log('let1:'+let1);//Err
 let let1;
+
+//클래스 호이스팅
+class Person{}
+console.log(Person);
+
+const p1=new Person();
+console.log(p1);
+
+console.clear();
+var str1='hello';
+
+const testFun=function(){
+    console.log(str1);
+    var str1='world';
+};
+testFun();//undefined
+
+class Parent{}
+class Child extends Parent{}
+
+//에러 발생
+class Child2 extends Parent2{}
+class Parent2{}
+
+
